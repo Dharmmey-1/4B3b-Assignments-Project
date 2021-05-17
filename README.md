@@ -6,6 +6,6 @@ This repository is for assignment and project submissions. It has different bran
 
 Kindly fork this repository and ONLY upload files in YOUR assigned branch.
 
-Submissions are made by initiating a pull request from YOUR branch in the forked version of the repository.
+Submissions are made by initiating a pull request from YOUR branch in the forked version of the repository, targeting YOUR branch in the parent repository.
 
 Cheers!

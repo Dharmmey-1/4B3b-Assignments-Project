@@ -1,0 +1,11 @@
+Write a program that takes in a persons full name and date of birth, then extract the surname and determine the age of the person and also the length of the persons last name.
+
+values should be outputted into a file as below:
+
+>> Please enter name : Kpongette Inyang 
+>> Please enter date of birth : 1991-03-11
+
+expected file output>>>
+
+lastname,length of name,age
+inyang,5,30

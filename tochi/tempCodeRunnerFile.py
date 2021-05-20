@@ -1,1 +1,1 @@
-print(joined_word, file=file)
+grade = "passed" if score >= 60 else "fail"

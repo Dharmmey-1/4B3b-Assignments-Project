@@ -56,9 +56,64 @@
 
 # reversed
 
-x = "Ade is my name"
+# x = "Ade is my name"
 
-reversed_x = list(reversed(x))
-print(reversed_x)
-joined = "".join(reversed_x)
-print(joined)
+# reversed_x = list(reversed(x))
+# print(reversed_x)
+# joined = "".join(reversed_x)
+# print(joined)
+
+# RANGE BUILTIN FUNCTION
+
+# numbers = range(10)
+# print(numbers) # returns a GENERATOR OBJECT
+# list_numbers = list(numbers) # CONVERT GENERATOR OBJECT INTO LIST IN ORDER TO SEE THE VALUES OF OUR RANGE
+# print(list_numbers)
+
+# even_numbers = range(2, 20, 2) # numbers from 2- 20 taking steps of 2
+# print(even_numbers)
+# print(list(even_numbers)) # convert to list in order to see values generated.
+
+# # the range function is mostly used in for loops as shown below.
+# prefered_number = 20
+# for value in range(2, 6, 1):
+#     print(prefered_number)
+
+# Map
+
+# map allows running a function on an iterable's members
+
+# names = ["ali", "john", "jonah"]
+# list_of_name_lens = map(len, names)
+# print(list_of_name_lens) # returns a generator object
+# print(list(list_of_name_lens))
+
+# func = lambda value: f"{value}-> {len(value)}"
+
+# list_of_name_lens = map(func, names)
+
+# print(list(list_of_name_lens))
+
+# numbers = range(1,8)
+
+# func = lambda number: number * number
+
+# # print(func(12))
+
+# squared_numbers = map(func, numbers)
+
+# print(list(squared_numbers))
+
+# FILTER 
+
+numbers = [90, 80, 20, 95, 55, 48, 23, 74]
+# func = lambda score: score < 60
+# filtered_list = filter(func, numbers)
+
+# print(list(filtered_list))
+
+# enumerate
+# print(list(enumerate(numbers)))
+
+for value in enumerate(numbers):
+    print(value)

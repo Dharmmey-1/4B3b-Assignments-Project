@@ -1,0 +1,1 @@
+    mad = credit[4]

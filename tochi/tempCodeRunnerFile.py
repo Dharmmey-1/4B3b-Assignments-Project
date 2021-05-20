@@ -1,0 +1,1 @@
+print(joined_word, file=file)

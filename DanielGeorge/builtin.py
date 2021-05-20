@@ -62,5 +62,7 @@ age = 2021 - int(birth_year)
 print(f"{surname}, {len(surname)}, {age}", file = assignment_file)
 
 
+print(fullname)
+
 
 

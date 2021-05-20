@@ -104,23 +104,33 @@
 
 # print(list(mapped))
 
-headache = input("Do you have a headache(t/f): ")
+# headache = input("Do you have a headache(t/f): ")
 
-if headache == 't':
-    has_fever = input('Do you have fever ? (t/f) ')
-    if has_fever == 't':
-        is_coughing = input(' Are you coughing? (t/f) ')
-        if is_coughing == "f":
-            print('see a doctor')
-        else:
-            print('contact NCDC')
+# if headache == 't':
+#     has_fever = input('Do you have fever ? (t/f) ')
+#     if has_fever == 't':
+#         is_coughing = input(' Are you coughing? (t/f) ')
+#         if is_coughing == "f":
+#             print('see a doctor')
+#         else:
+#             print('contact NCDC')
 
-    else:
-        bitter_taste = input(' Do you have biiter taste ? (t/f) ')
-        if bitter_taste == 't':
-            print('You probably have malaria')
-        else:
-            print( "You have a heart break. Go and see a therapist")
+#     else:
+#         bitter_taste = input(' Do you have biiter taste ? (t/f) ')
+#         if bitter_taste == 't':
+#             print('You probably have malaria')
+#         else:
+#             print( "You have a heart break. Go and see a therapist")
         
-else:
-    print('ee go be ')
+# else:
+#     print('ee go be ')
+
+
+file_path =r"C:\Users\HP\Documents\UNIVELCITY\DATA_SCIENCE\git\4B3b-Assignments-Project\atha\FILES\gtb_doc.csv"
+
+file = open(file_path, 'r')
+
+file_data = file.readlines()
+
+for line in file_data:
+    print(file)

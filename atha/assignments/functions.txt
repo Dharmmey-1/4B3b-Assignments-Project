@@ -1,0 +1,3 @@
+Write a program that takes a file path preferably path to a statement file and then aggregate all the payments on a daily basis. The values should then be appended into another list and then calculate the variance on the daily credits as retrieved from the file.
+
+Please endeavor to use functional programming to accomplish the solution.

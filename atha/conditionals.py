@@ -26,4 +26,4 @@ headache = input("Do you have a headache (t/f) : ")
 if headache == "t":
     pass
 else:
-    pass
+    pass 

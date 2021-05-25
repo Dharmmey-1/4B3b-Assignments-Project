@@ -98,7 +98,7 @@
 
 # numbers = [90, 80, 20, 85, 55, 48, 23, 74]
 
-# func = lambda score: "Passed" if score>=60 else "Average" if score > 49 and score< 60 else "Fail" 
+# func = lambda score: "Passed" if score>=60 else "Average" if score > 49 and score< 60 else "Fail"
 
 # mapped = map(func, numbers)
 
@@ -121,16 +121,45 @@
 #             print('You probably have malaria')
 #         else:
 #             print( "You have a heart break. Go and see a therapist")
-        
+
 # else:
 #     print('ee go be ')
 
 
-file_path =r"C:\Users\HP\Documents\UNIVELCITY\DATA_SCIENCE\git\4B3b-Assignments-Project\atha\FILES\gtb_doc.csv"
+# file_path = r"C:\Users\HP\Documents\UNIVELCITY\DATA_SCIENCE\git\4B3b-Assignments-Project\atha\FILES\gtb_doc.csv"
 
-file = open(file_path, 'r')
+# file = open(file_path, 'r')
 
-file_data = file.readlines()
+# file_data = file.readlines()
 
-for line in file_data:
-    print(file)
+# credit_list = []
+# for line in file_data:
+#     split_line = line.split(',')
+#     credit_list.append(split_line[4])
+
+
+# # print(credit_list)
+# cleaned_list = credit_list[1:-1]
+# # print(cleaned_list)
+
+
+# def func(num): return float(num)
+
+
+# mapped_list = map(func, cleaned_list)
+
+# print(list(mapped_list))
+
+
+num_range = range(100, 340)
+
+for value in num_range:
+    var = value*3
+    var_string = str(var)
+    multiplied_list = list(var_string)
+
+    val_string = str(value)
+    original_values = list(val_string)
+
+    if original_values[2] == multiplied_list[0] == multiplied_list[1] == multiplied_list[2]:
+        print(original_values)

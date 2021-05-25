@@ -1,1 +1,1 @@
-grade = "passed" if score >= 60 else "fail"
+print(total_credits)

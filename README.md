@@ -15,3 +15,4 @@ SDLC : https://www.tutorialspoint.com/sdlc/sdlc_overview.htm
 KEYWORDS : https://www.programiz.com/python-programming/keywords-identifier
 
 CONDITIONALS PYTHON : https://realpython.com/python-conditional-statements/
+FUNCTIONS - https://realpython.com/defining-your-own-python-function/

@@ -46,13 +46,13 @@
 
 # print(total_debits)
 
-# num_range = range(100, 340)
+num_range = range(100, 340)
 
-# for value in num_range:
+for value in num_range:
     
-#     if str(value)[-1]*3 == str(value*3):
+    if str(value)[-1]*3 == str(value*3):
 
-#         print(value)
+        print(value)
 
 
 # for i in range(1,100):
@@ -149,25 +149,25 @@
 
 # show_primes()
 
-def fetch_and_agg_file():
-    file_name = r"C:\Users\kboys\OneDrive\Desktop\CLASSES\UNIVELCITY CLASSES\4B3b-Assignments-Project\atha\FILES\gtb_doc.csv"
+# def fetch_and_agg_file():
+#     file_name = r"C:\Users\kboys\OneDrive\Desktop\CLASSES\UNIVELCITY CLASSES\4B3b-Assignments-Project\atha\FILES\gtb_doc.csv"
 
-    file = open(file_name, "r")
+#     file = open(file_name, "r")
 
-    file_data = file.readlines()
-    total_credits = 0
+#     file_data = file.readlines()
+#     total_credits = 0
 
-    for line in file_data:
+#     for line in file_data:
 
-        # print(line.upper() )
+#         # print(line.upper() )
 
-        split_line = line.split(",")
+#         split_line = line.split(",")
 
-        credit = split_line[4]
+#         credit = split_line[4]
 
-        if not credit.isalpha() and len(credit)> 1:
-            total_credits = total_credits + float(credit)
+#         if not credit.isalpha() and len(credit)> 1:
+#             total_credits = total_credits + float(credit)
 
-            # print(credit)
+#             # print(credit)
 
-    print(total_credits)
+#     print(total_credits)

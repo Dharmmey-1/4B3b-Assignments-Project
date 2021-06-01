@@ -151,15 +151,18 @@
 # print(list(mapped_list))
 
 
-num_range = range(100, 340)
+# num_range = range(100, 340)
 
-for value in num_range:
-    var = value*3
-    var_string = str(var)
-    multiplied_list = list(var_string)
+# for value in num_range:
+#     var = value*3
+#     var_string = str(var)
+#     multiplied_list = list(var_string)
 
-    val_string = str(value)
-    original_values = list(val_string)
+#     val_string = str(value)
+#     original_values = list(val_string)
 
-    if original_values[2] == multiplied_list[0] == multiplied_list[1] == multiplied_list[2]:
-        print(original_values)
+#     if original_values[2] == multiplied_list[0] == multiplied_list[1] == multiplied_list[2]:
+#         print(original_values)
+
+
+

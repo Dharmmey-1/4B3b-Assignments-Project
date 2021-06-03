@@ -16,3 +16,4 @@ KEYWORDS : https://www.programiz.com/python-programming/keywords-identifier
 
 CONDITIONALS PYTHON : https://realpython.com/python-conditional-statements/
 FUNCTIONS - https://realpython.com/defining-your-own-python-function/
+mysql - https://www.w3schools.com/sql/sql_select.asp

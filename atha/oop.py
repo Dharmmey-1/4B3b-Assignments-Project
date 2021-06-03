@@ -160,7 +160,7 @@ import winsound
 # # print(kunle.make_sound())
 
 
-folder = r"C:\Users\kboys\OneDrive\Desktop\CLASSES\UNIVELCITY CLASSES\4B3b-Assignments-Project\materials"
+folder = r"C:/Users/kboys/OneDrive/Desktop/CLASSES/UNIVELCITY CLASSES/4B3b-Assignments-Project/materials"
 
 class User():
 
@@ -172,11 +172,13 @@ class User():
 
         has_loggedin = self.login()
 
-        self.notes = False
+        self.notes = []
 
         if has_loggedin == True:
 
             self.logged_in = True
+            self.load_notes()
+            print(self.notes)
 
         else:
 
@@ -196,15 +198,17 @@ class User():
 
     def login(self):
 
-        file_name = "\logins.csv"
+        file_name = "/logins.csv"
         file = open(folder + file_name, "r")
         data = file.readlines()
+        # print(data)
 
         for line in data:
             # print(line)
             splitted_line = line.split(",,")
             stored_username, stored_password = splitted_line
 
+            # print(self.username, stored_username)
             if self.username == stored_username:
                 print("Corect username")
                 # print(password , stored_password, password == stored_password)
@@ -213,17 +217,39 @@ class User():
                     print("Successfully logged in..!!!")
 
                     return True
-            else:
-                print("Incorrect details")
-                return False
+        else:
+            print("Incorrect details")
+            return False
 
-    def write_note(self, ):
+    def write_note(self):
+        
+        title = input("Please enter note title \n: ")
+        body = input("Please enter note body \n: ")
 
-        file_name = "\logins.csv"
+        file_name = "/notes.csv"
         file = open(folder + file_name, "a")
-        file.write(f"{self.username},,{self.password}\n")
+        file.write(f"{self.username},,{title},,{body}\n")
 
         file.close()
 
+    def load_notes(self):
 
-user = User(username="fred", password = "1111111")
+        file_name = "/notes.csv"
+        file = open(folder + file_name, "r")
+        data = file.readlines()
+
+        for line in data:
+
+            splitted_line = line.split(",,")
+            username, title, body = splitted_line
+
+            if self.username == username:
+                self.notes.append({
+                    "title": title,
+                    "body": body
+                })
+
+
+
+
+user = User(username="ayo", password = "111111")

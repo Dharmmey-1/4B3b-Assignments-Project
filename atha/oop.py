@@ -122,39 +122,108 @@ import winsound
 # new_animal = Animal("red")
 # print(new_animal)
 
-class Human():# CLASS DEFINITION WITH SOME CLASS ATTRIBUTES AND INSTANCE ATTRIBUTES AND A MAKE_SOUND METHOD
-    hair_color = "red"
-    skin_color = "caramel"
-    eyes = 2
-    nose = 1
-    mouth = 1
+# class Human():# CLASS DEFINITION WITH SOME CLASS ATTRIBUTES AND INSTANCE ATTRIBUTES AND A MAKE_SOUND METHOD
+#     hair_color = "red"
+#     skin_color = "caramel"
+#     eyes = 2
+#     nose = 1
+#     mouth = 1
 
-    def __init__(self, name, age, aggression, address, vocal_frequency) -> None: #INITIALIZATION FUNCTION
-        self.aggression = aggression
-        self.name = name
-        self.age = age
-        self.address = address
-        self.voice = vocal_frequency
+#     def __init__(self, name, age, aggression, address, vocal_frequency) -> None: #INITIALIZATION FUNCTION
+#         self.aggression = aggression
+#         self.name = name
+#         self.age = age
+#         self.address = address
+#         self.voice = vocal_frequency
 
-    def make_sound(self):
-        winsound.Beep(self.voice,1000)
+#     def make_sound(self):
+#         winsound.Beep(self.voice,1000)
 
-class Warrior(Human):
+# class Warrior(Human):
 
-    shield = True
-    sword = True
+#     shield = True
+#     sword = True
 
-    def __init__(self, name, age, aggression, address, vocal_frequency) -> None:
-        super().__init__(name, age, aggression, address, vocal_frequency)
+#     def __init__(self, name, age, aggression, address, vocal_frequency) -> None:
+#         super().__init__(name, age, aggression, address, vocal_frequency)
 
-    def make_sound(self):
-        for i in range(self.aggression//3):
-             super().make_sound()
+#     def make_sound(self):
+#         for i in range(self.aggression//3):
+#              super().make_sound()
 
 
-ogbuefi = Warrior("ogbuefi", 30, 6, "No 10, Salami str", 500)
-print(ogbuefi.name)
-print(ogbuefi.make_sound())
-# kunle = Human("kunle", 30, 6, "No 10, Salami str", 500)
-# print(kunle.name)
-# print(kunle.make_sound())
+# ogbuefi = Warrior("ogbuefi", 30, 6, "No 10, Salami str", 500)
+# print(ogbuefi.name)
+# print(ogbuefi.make_sound())
+# # kunle = Human("kunle", 30, 6, "No 10, Salami str", 500)
+# # print(kunle.name)
+# # print(kunle.make_sound())
+
+
+folder = r"C:\Users\kboys\OneDrive\Desktop\CLASSES\UNIVELCITY CLASSES\4B3b-Assignments-Project\materials"
+
+class User():
+
+    def __init__(self, username, password) -> None:
+
+        
+        self.username = username
+        self.password = password
+
+        has_loggedin = self.login()
+
+        self.notes = False
+
+        if has_loggedin == True:
+
+            self.logged_in = True
+
+        else:
+
+            should_signup = input("Do you want to create an account(t/f): ")
+
+            if should_signup == "t":
+                self.signUp()
+                print("Sign up successful..!!!")
+
+    def signUp(self):
+
+        file_name = "\logins.csv"
+        file = open(folder + file_name, "a")
+        file.write(f"{self.username},,{self.password}\n")
+
+        file.close()
+
+    def login(self):
+
+        file_name = "\logins.csv"
+        file = open(folder + file_name, "r")
+        data = file.readlines()
+
+        for line in data:
+            # print(line)
+            splitted_line = line.split(",,")
+            stored_username, stored_password = splitted_line
+
+            if self.username == stored_username:
+                print("Corect username")
+                # print(password , stored_password, password == stored_password)
+                if self.password == stored_password.replace("\n", ""):
+                    print("correct password")
+                    print("Successfully logged in..!!!")
+
+                    return True
+            else:
+                print("Incorrect details")
+                return False
+
+    def write_note(self, ):
+
+        file_name = "\logins.csv"
+        file = open(folder + file_name, "a")
+        file.write(f"{self.username},,{self.password}\n")
+
+        file.close()
+
+
+user = User(username="fred", password = "1111111")

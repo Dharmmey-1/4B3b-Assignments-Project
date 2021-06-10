@@ -18,8 +18,7 @@ CONDITIONALS PYTHON : https://realpython.com/python-conditional-statements/
 FUNCTIONS - https://realpython.com/defining-your-own-python-function/
 mysql - https://www.w3schools.com/sql/sql_select.asp
 
-
-
+ 
 ########### SQL COMMANDS #####################
 
 CREATE TABLE student (id INT(8) NOT NULL AUTO_INCREMENT PRIMARY KEY, stu_name VARCHAR(100), age INT(3) NOT NULL, address VARCHAR(100), email VARCHAR(50) )
